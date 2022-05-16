@@ -2,7 +2,7 @@
 
 The PyTorch implementation of semi-supervised learning method—ClassHyPer.
 The manuscript can be visited via https://www.mdpi.com/2072-4292/14/4/879
----
+
 ## 1. Datasets
 ### (1) Links
 * [DeepGlobe Road](https://www.kaggle.com/datasets/balraj98/deepglobe-road-extraction-dataset)
@@ -21,7 +21,7 @@ After obtain the datasets, you need to process first and generate lists of image
     /val_label.txt
     /train_unsup_image.txt
 ``` 
----
+
 ## 2. Usage
 ### 2.1 Installation
 The code is developed using Python 3.8 with PyTorch 1.9.0 on Windows 10. The code is developed and tested using singel RTX 2080 Ti GPU.
@@ -45,7 +45,7 @@ conda activate class_hyper
 1. set `root_dir` and hyper-parameters configuration in `./configs/config.cfg`.
 2. set `pathCkpt` in `test.py` to indicate the model checkpoint file.
 3. run `python test.py`.
----
+
 ## 3. Structure of ClassHyPer
 <img src="figs/ClassHyPer.jpg" width="800px" hight="1400px" />
 
@@ -64,13 +64,13 @@ If this repo is useful in your research, please kindly consider citing our paper
   publisher={MDPI}
 }
 ```
----
+
 ##  5. References
 [1] [Semi-Supervised Semantic Segmentation with Cross Pseudo Supervision](https://arxiv.org/abs/2106.01226)  
 [2] [Semi-supervised semantic segmentation needs strong, varied perturbations](https://arxiv.org/abs/1906.01916)  
 [3] [ClassMix: Segmentation-Based Data Augmentation for Semi-Supervised Learning](https://arxiv.org/abs/2007.07936)  
 ...  
----
+
 **If our work give you some insights and hints, star me please! Thank you~**
 
 
