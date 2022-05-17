@@ -54,10 +54,6 @@ class Tester(object):
                                           self.begin_time)
         ensure_dir(self.test_log_path)
 
-        self.predict_path = os.path.join(self.args.output, 'test', 'predict', self.model_name,
-                                         self.begin_time)
-        ensure_dir(self.predict_path)
-
         if self.config.use_seed:
             self.resume_ckpt_path = resume_file if resume_file is not None else \
                 os.path.join(self.config.save_dir, self.model_name,
@@ -66,10 +62,6 @@ class Tester(object):
             self.resume_ckpt_path = resume_file if resume_file is not None else \
                 os.path.join(self.config.save_dir, self.model_name,
                              self.begin_time, 'checkpoint-best.pth')
-
-        # # 将使用的模型文件名写入到文件中便于查看
-        # with open(os.path.join(self.predict_path, 'checkpoint.txt'), 'w') as f:
-        #     f.write(self.resume_ckpt_path)
 
         self.evaluator = Evaluator(self.config.nb_classes, self.device)
 
@@ -144,7 +136,7 @@ class Tester(object):
 
         # Save results to log file
         print("     + Saved history of evaluation phase !")
-        hist_path = os.path.join(self.test_log_path, "history1.txt")
+        hist_path = os.path.join(self.test_log_path, "test-result.txt")
         with open(hist_path, 'w') as f:
             f.write(str(self.history).replace("'", '"'))
             f.write('\nConfusion_matrix:\n')

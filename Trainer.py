@@ -241,7 +241,7 @@ class Trainer(object):
 
         # save history file
         print("     + Saving History ... ... ")
-        hist_path = os.path.join(self.log_dir, 'history1.txt')
+        hist_path = os.path.join(self.log_dir, 'history.txt')
         with open(hist_path, 'w') as f:
             f.write(str(self.history))
 

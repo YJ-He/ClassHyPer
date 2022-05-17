@@ -13,6 +13,11 @@ The manuscript can be visited via https://www.mdpi.com/2072-4292/14/4/879
 After obtain the datasets, you need to process first and generate lists of image/label files and place as the structure shown below. Every txt file contains the full absolute path of the files, each image/label per line. Example files can be found  in `./examples`.
 ```
 /root
+    /save/{model.name}/{datetime}/log/{model.name}.txt
+                                     /history.txt
+                                 /checkpoint-ep{epoch}-{val_iou}.pth
+                                 /checkpoint-best.pth
+         /test/log/{model.name}/{datetime}/test-result.txt
     /train_image.txt
     /train_label.txt
     /test_image.txt
@@ -24,7 +29,7 @@ After obtain the datasets, you need to process first and generate lists of image
 
 ## 2. Usage
 ### 2.1 Installation
-The code is developed using Python 3.8 with PyTorch 1.9.0 on Windows 10. The code is developed and tested using single RTX 2080 Ti GPU.
+The code is developed using Python 3.8 with PyTorch 1.9.0 on Windows 10 and tested based on single RTX 2080 Ti GPU.
 
 **(1) Clone this repo.**
 ```
