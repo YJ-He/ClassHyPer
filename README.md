@@ -29,7 +29,7 @@ After obtain the datasets, you need to process first and generate lists of image
 
 ## 2. Usage
 ### 2.1 Installation
-The code is developed using Python 3.8 with PyTorch 1.9.0 on Windows 10 and tested based on single RTX 2080 Ti GPU.
+The code is developed using Python 3.8 with PyTorch 1.9.0 and tested based on single RTX 2080 Ti GPU.
 
 **(1) Clone this repo.**
 ```
